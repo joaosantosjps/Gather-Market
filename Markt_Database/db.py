@@ -28,7 +28,6 @@ class SQLAlchemyDataPipeline:
         )
 
         engine = sal.create_engine(connect_url)
-        print(engine)
         Base.metadata.create_all(engine)
 
         session = sessionmaker(autoflush=True)
